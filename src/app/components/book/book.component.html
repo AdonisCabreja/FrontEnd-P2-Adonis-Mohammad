@@ -1,0 +1,18 @@
+<div class="container" *ngIf="isDataLoaded">
+  <h2 class="text-center pt-3">{{ book.volumeInfo.title }}</h2>
+  <p class="text-center">by {{ book.volumeInfo.authors[0] }}</p>
+  <div class="row justify-content-center">
+    <img class="img-fluid" style="width: 200px;" [src]="book.volumeInfo.imageLinks.thumbnail" alt="book-cover-image">
+  </div>
+  <h5 class="text-center pt-3" *ngIf="book.saleInfo.saleability === 'FOR_SALE'">{{ book.saleInfo.listPrice.amount }} {{ book.saleInfo.listPrice.currencyCode }}</h5>
+  <h5 class="text-center pt-3" *ngIf="book.saleInfo.saleability === 'NOT_FOR_SALE'">Price Currently Unavailable</h5>
+  <div class="row justify-content-center pt-3">
+    <button class="btn btn-primary">Add to Collection</button>
+    <button class="btn btn-warning">Google Books Link</button>
+  </div>
+  <h3>Description</h3>
+  <div class="container">
+      <p>{{ book.volumeInfo.description }}</p>
+  </div>
+  <!-- <h3>Suggestions</h3> -->
+</div>

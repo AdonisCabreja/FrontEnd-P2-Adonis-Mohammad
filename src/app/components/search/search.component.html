@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="input-group pt-5 row justify-content-center">
+    <div class="col-sm-5">
+      <input #input class="form-control" (input)="search(input.value)" type="text" placeholder="Search For Books" autocomplete="off">
+      <div class="list-group" *ngIf="input.value.length >= 4">  <!--starts showing results in the input box after typing in 4 or more characters-->
+        <!--loops through book and then if clicked it sends the title of the book in the url to access it later-->
+        <div class="list-group-item list-group-item-action"
+             *ngFor="let book of books" 
+             routerLink="/book/{{ book.volumeInfo.title }}">
+           {{ book.volumeInfo.title.slice(0,40) + "..." }}  <!--using slice here to limit long titles to only 40 characters-->
+        </div>
+      </div>
+    </div>
+    <!-- <button class="btn btn-primary">Search</button> -->
+  </div>
+</div>
