@@ -8,11 +8,13 @@
   <h5 class="text-center pt-3" *ngIf="book.saleInfo.saleability === 'NOT_FOR_SALE'">Price Currently Unavailable</h5>
   <div class="row justify-content-center pt-3">
     <button class="btn btn-primary">Add to Collection</button>
-    <button class="btn btn-warning">Google Books Link</button>
+    <button class="btn btn-warning"><a [href]="book.saleInfo.buyLink" target="_blank">Google Books Link</a></button>
   </div>
   <h3>Description</h3>
   <div class="container">
       <p>{{ book.volumeInfo.description }}</p>
   </div>
-  <!-- <h3>Suggestions</h3> -->
+  <div class="container">
+    <app-review></app-review>
+  </div>
 </div>

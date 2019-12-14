@@ -8,6 +8,8 @@ import { SearchComponent } from './components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BookComponent } from './components/book/book.component';
 import { LoginComponent } from './components/login/login.component';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { ReviewComponent } from './components/review/review.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { LoginComponent } from './components/login/login.component';
     NavComponent,
     SearchComponent,
     BookComponent,
-    LoginComponent
+    LoginComponent,
+    CreateAccountComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,

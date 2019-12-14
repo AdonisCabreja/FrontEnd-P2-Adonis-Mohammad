@@ -1,0 +1,10 @@
+<div>
+  <h4 class="pt-5">Reviews</h4>
+  <div class="card mt-3 mb-5" *ngFor="let review of reviews">
+    <p class="card-header">{{ review.name }}</p>
+    <div class="card-body">
+      <h5 class="card-title">{{ review.headline }}</h5>
+      <p class="card-text">{{ review.description }}</p>
+    </div>
+  </div>
+</div>
